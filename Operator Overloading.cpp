@@ -1,11 +1,19 @@
 // Operator Overloading.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
 
+#include "string.h"  // NOLINT
 int main()
 {
-    std::cout << "Hello World!\n";
+    String str1("Hello and welcome "), str2("to th World of programming.");
+    // ReSharper disable CppDeclaratorNeverUsed
+    String str3(str2);
+    // ReSharper restore CppDeclaratorNeverUsed
+    // ReSharper disable CppAssignedValueIsNeverUsed
+    // ReSharper disable CppIdenticalOperandsInBinaryExpression
+    str1 = str2 = str1 = str1;
+    // ReSharper restore CppIdenticalOperandsInBinaryExpression
+    // ReSharper restore CppAssignedValueIsNeverUsed
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
